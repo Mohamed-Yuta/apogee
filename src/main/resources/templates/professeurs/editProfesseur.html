@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1"
+      xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Modification Professeurt</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<div layout:fragment="content3">
+    <div class="col-6 mx-auto my-2">
+        <h2 class="fw-bold text-primary my-5">Modification de Professeur :</h2>
+        <form method="post" th:action="@{/professeur}">
+            <div class="input-group mt-3">
+                <label class="col-3 input-group-text">ID :</label>
+                <label class="col-9 input-group-text" th:text="${professeur.id}"></label>
+                <input class="form-control" type="hidden" name="id" th:value="${professeur.id}">
+            </div>
+            <span th:errors="${professeur.id}" class="text-danger font-monospace"></span>
+
+            <div class="input-group mt-3">
+                <label for="nom" class="col-3 input-group-text">Nom :</label>
+                <input class="form-control col-9" type="text" name="nom" id="nom" th:value="${professeur.nom}">
+            </div>
+            <span th:errors="${professeur.nom}" class="text-danger font-monospace"></span>
+
+            <div class="input-group mt-3">
+                <label for="prenom" class="col-3 input-group-text">Prénom :</label>
+                <input class="form-control col-9" type="text" name="prenom" id="prenom" th:value="${professeur.prenom}">
+            </div>
+            <span th:errors="${professeur.prenom}" class="text-danger font-monospace"></span>
+
+
+
+            <div class="input-group mt-3">
+                <label for="dateN" class="col-3 input-group-text">Date Naissance :</label>
+                <input class="form-control col-9" type="date" name="dateNaissance" id="dateN" th:value="${professeur.dateNaissance}">
+            </div>
+            <span th:errors="${professeur.dateNaissance}" class="text-danger font-monospace"></span>
+
+            <div class="input-group mt-3">
+                <label for="tel" class="col-3 input-group-text">Tele  :</label>
+                <input class="form-control col-9" type="text" name="tel" id="tel" th:value="${professeur.tel}">
+            </div>
+            <span th:errors="${professeur.tel}" class="text-danger font-monospace"></span>
+            <div class="input-group mt-3">
+                <label for="adre" class="col-3 input-group-text">Adresse :</label>
+                <input class="form-control col-9" type="text" name="adresse" id="adre" th:value="${professeur.adresse}">
+            </div>
+            <span th:errors="${professeur.adresse}" class="text-danger font-monospace"></span>
+
+
+
+            <button type="submit" class="btn btn-primary mt-4 col-12">Save</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

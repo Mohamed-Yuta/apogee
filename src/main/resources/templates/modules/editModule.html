@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1"
+      xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Modification Module</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<div layout:fragment="content3">
+    <div class="col-6 mx-auto my-2">
+        <h2 class="fw-bold text-primary my-5">Modification de Module :</h2>
+        <form method="post" th:action="@{/module}">
+            <div class="input-group mt-3">
+                <label class="col-3 input-group-text">ID :</label>
+                <label class="col-9 input-group-text" th:text="${module.id}"></label>
+                <input class="form-control" type="hidden" name="id" th:value="${module.id}">
+            </div>
+            <span th:errors="${module.id}" class="text-danger font-monospace"></span>
+
+            <div class="input-group mt-3">
+                <label for="nom" class="col-3 input-group-text">Nom :</label>
+                <input class="form-control col-9" type="text" name="nom" id="nom" th:value="${module.nom}">
+            </div>
+            <span th:errors="${module.nom}" class="text-danger font-monospace"></span>
+
+            <div class="input-group mt-3">
+                <label for="nomFilliere" class="col-3 input-group-text">Fillière :</label>
+                <input class="form-control col-9" type="text" name="nomFilliere" id="nomFilliere" placeholder="Nom de la filière">
+            </div>
+
+            <div class="input-group mt-3">
+                <label for="nomProfesseur" class="col-3 input-group-text">Professeur :</label>
+                <input class="form-control col-9" type="text" name="nomProfesseur" id="nomProfesseur" placeholder="Nom du professeur">
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary mt-4 col-12">Save</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

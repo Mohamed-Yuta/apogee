@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Nouvelle Note</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<div layout:fragment="content2">
+    <div class="col-6 mx-auto my-2">
+        <h2 class="fw-bold text-primary my-5">Ajout d'une Note :</h2>
+        <form method="post" th:action="@{/addNote}">
+            <div class="input-group mt-3">
+                <label for="nom" class="col-3 input-group-text">Nom :</label>
+                <input class="form-control col-9" type="number" name="valeurNote" id="nom" th:value="${valeurNote}" placeholder="La note ">
+            </div>
+
+
+            <div class="input-group mt-3">
+                <label for="prenom" class="col-3 input-group-text">Etudiant Id :</label>
+                <input class="form-control col-9" type="text" name="etudiantId" id="prenom" th:value="${etudiantId}" placeholder="Etudiant Id">
+            </div>
+
+
+
+
+
+            <div class="input-group mt-3">
+                <label for="dateN" class="col-3 input-group-text">Module Id :</label>
+                <input class="form-control col-9" type="number" name=moduleId id="dateN" th:value="${moduleId}">
+            </div>
+
+
+
+
+
+
+            <button type="submit" class="btn btn-primary mt-4 col-12">Save</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

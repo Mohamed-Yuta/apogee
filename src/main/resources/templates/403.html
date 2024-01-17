@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1"
+      >
+<head>
+    <meta charset="UTF-8">
+    <title>403</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+        .app {
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 0 0 10px #2288ffaa;
+            font-size: 10rem;
+            margin-top:50px;
+        }
+        .txt {
+            font-size: 3rem;
+        }
+
+        @keyframes blink {
+            0%   {opacity: 0}
+            49%  {opacity: 0}
+            50%  {opacity: 1}
+            100% {opacity: 1}
+        }
+        .blink {
+            animation-name: blink;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content4">
+    <div class="app text-center text-primary">
+        <div>403</div>
+        <div class="txt">
+            Forbidden<span class="blink">_</span>
+        </div>
+        <div class="text-dark mt-5 fs-5" style="text-shadow: none;">
+            You are not allowed to access this resource !
+        </div>
+    </div>
+</div>
+</body>
+</html>

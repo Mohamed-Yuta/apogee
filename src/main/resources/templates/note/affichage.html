@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage</title>
+</head>
+<body>
+<h1>Affichage des notes pour l'étudiant : <span th:text="${affichage.etudiant.nom}"></span></h1>
+<p>Semestre : <span th:text="${affichage.semestre}"></span></p>
+<p>Commentaire : <span th:text="${affichage.commentaire}"></span></p>
+</body>
+</html>

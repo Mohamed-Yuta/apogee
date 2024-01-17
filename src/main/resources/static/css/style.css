@@ -1,0 +1,43 @@
+*{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box
+}
+
+.content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: auto ;
+            background-color: black;
+ }
+p {
+            margin-left: 20px;
+            font-size: 30px;
+            color: blue;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+}
+ul{
+            list-style: none;
+            margin-right: 250px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+ul li {
+            display: inline;
+            margin-right: 20px;
+            border: 2px solid white;
+            border-radius: 4px;
+            background-color: blue;
+            padding: 8px;
+}
+ul li a {
+            text-decoration: none;
+            font-size: 20px;
+
+            color: white;
+
+}

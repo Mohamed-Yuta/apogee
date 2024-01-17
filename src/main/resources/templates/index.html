@@ -1,0 +1,26 @@
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1"
+>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/sty.css">
+  <link rel="stylesheet" th:href="@{navbar}" />
+</head>
+<body>
+
+<div th:replace="~{navbar :: content}"></div>
+<div class="text-box">
+  <h1>Faculté des Sciences et Techniques de Tanger </h1>
+  <p class="para">La Faculté des Sciences et Techniques de Tanger (FSTT), relevant de l’Université Abdelmalek Essaâdi a
+  été créée en 1995. Elle fait partie des établissements de l’enseignement supérieur
+  à accès régulé et a pour missions la formation initiale dans les domaines scientifiques et techniques,
+  la formation continue ainsi que la recherche et le développement dans les domaines des sciences et technique.</p>
+  <a href="projet.html" class="hero-btn" target="_blank">Plus d'informations</a>
+</div>
+
+</body>
+</html>
+
+
